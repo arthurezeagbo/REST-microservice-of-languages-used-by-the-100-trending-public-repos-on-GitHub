@@ -1,10 +1,12 @@
 package com.arthurezeagbo.repoinfoservice.models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Item {
 
     private Integer id;

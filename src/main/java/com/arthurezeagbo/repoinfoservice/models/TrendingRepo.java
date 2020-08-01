@@ -1,18 +1,19 @@
 package com.arthurezeagbo.repoinfoservice.models;
 
 import com.arthurezeagbo.repoinfoservice.models.Item;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TrendingRepo {
 
     private Integer totalCount;
     private Boolean incompleteResults;
     private List<Item> items = null;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public TrendingRepo(){}
 
@@ -40,11 +41,4 @@ public class TrendingRepo {
         this.items = items;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 }
