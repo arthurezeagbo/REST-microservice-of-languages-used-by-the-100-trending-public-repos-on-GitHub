@@ -25,7 +25,6 @@ public class Owner {
     private String receivedEventsUrl;
     private String type;
     private Boolean siteAdmin;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Owner(){}
 
@@ -191,11 +190,4 @@ public class Owner {
         this.siteAdmin = siteAdmin;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 }

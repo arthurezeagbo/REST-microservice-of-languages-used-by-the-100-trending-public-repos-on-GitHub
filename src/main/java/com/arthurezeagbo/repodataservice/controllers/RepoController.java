@@ -19,8 +19,11 @@ import java.util.stream.Collectors;
 @RestController
 public class RepoController {
 
-    @Autowired
-    private IRepoService _repoService;
+    private final IRepoService _repoService;
+
+    public RepoController(IRepoService _repoService) {
+        this._repoService = _repoService;
+    }
 
     @GetMapping("/getall")
 
